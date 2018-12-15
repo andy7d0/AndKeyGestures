@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:key="test_dropdown"
+        android:summary="Click to check dropdown"
+        android:title="Dropdown preview" />
+
+    <online.andy7d0.keyremapandgestures.ApplicationSelector
+        android:defaultValue=""
+        android:entries="@array/appPref"
+        android:entryValues="@array/appPref"
+        android:key="apps_timer"
+        android:summary="Select timer application"
+        android:title="Timer application" />
+
+    <PreferenceCategory android:title="Shortcuts">
+        <online.andy7d0.keyremapandgestures.ApplicationSelector
+            android:defaultValue=""
+            android:entries="@array/appPref"
+            android:entryValues="@array/appPref"
+            android:key="apps_slot_1"
+            android:summary="Select application #1"
+            android:title="Application #1" />
+        <online.andy7d0.keyremapandgestures.ApplicationSelector
+            android:defaultValue=""
+            android:entries="@array/appPref"
+            android:entryValues="@array/appPref"
+            android:key="apps_slot_2"
+            android:summary="Select application #2"
+            android:title="Application #2" />
+        <online.andy7d0.keyremapandgestures.ApplicationSelector
+            android:defaultValue=""
+            android:entries="@array/appPref"
+            android:entryValues="@array/appPref"
+            android:key="apps_slot_3"
+            android:summary="Select application #3"
+            android:title="Application #3" />
+        <online.andy7d0.keyremapandgestures.ApplicationSelector
+            android:defaultValue=""
+            android:entries="@array/appPref"
+            android:entryValues="@array/appPref"
+            android:key="apps_slot_4"
+            android:summary="Select application #4"
+            android:title="Application #4" />
+        <online.andy7d0.keyremapandgestures.ApplicationSelector
+            android:defaultValue=""
+            android:entries="@array/appPref"
+            android:entryValues="@array/appPref"
+            android:key="apps_slot_5"
+            android:summary="Select application #5"
+            android:title="Application #5" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

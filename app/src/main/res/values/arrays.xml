@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="actions">
+        <item>Default</item>
+        <item>Do nothing</item>
+        <item>Ringer: normal</item>
+        <item>Ringer: vibrate</item>
+        <item>Ringer: silent</item>
+        <item>Go back</item>
+        <item>Show home screen</item>
+        <item>Show recent apps</item>
+        <item>Show notifications</item>
+    </string-array>
+    <string-array name="appPref">
+        <item>app 1</item>
+        <item>app 2</item>
+    </string-array>
+</resources>

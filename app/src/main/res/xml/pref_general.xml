@@ -1,0 +1,38 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- NOTE: EditTextPreference accepts EditText attributes. -->
+    <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
+
+    <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
+         dismiss it. -->
+    <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
+
+    <Preference
+        android:key="call_settings"
+        android:summary="Call accessibility service settings"
+        android:title="Service settings" />
+    <Preference
+        android:key="call_overlay"
+        android:summary="Call overlay settings"
+        android:title="Overlay settings" />
+
+    <EditTextPreference
+        android:defaultValue="200"
+        android:inputType="number"
+        android:key="double_click_time"
+        android:numeric="integer"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/click_time_label" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="show_home"
+        android:title="Show home button in recent list" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="show_search"
+        android:title="Show search button in recent list" />
+
+</PreferenceScreen>

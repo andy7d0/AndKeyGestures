@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/watch_content"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+    android:background="@color/colorDropdown"
+
+    tools:context=".WatchActivity">
+
+        <TextClock
+            android:id="@+id/clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="sans-serif-condensed"
+            android:format12Hour="h:mm a"
+            android:format24Hour="hh:mm"
+            android:text=" 00:59 AM"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/date"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextClock
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif-condensed"
+            android:format12Hour="EEE, d"
+            android:format24Hour="EEE, dd"
+            android:text="EEE, dd"
+            android:textAlignment="viewEnd"
+            android:textColor="@android:color/white"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/clock"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextClock
+            android:id="@+id/month_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:format12Hour="MMM yyyy"
+            android:format24Hour="MMM yyyy"
+            android:text="MMM 2019"
+            android:textAlignment="viewEnd"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="@+id/date"
+            app:layout_constraintTop_toBottomOf="@+id/date" />
+
+        <LinearLayout
+            android:id="@+id/alarmGrp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clock">
+
+                <ImageButton
+                    android:id="@+id/alarmButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clock"
+                    app:srcCompat="@drawable/ic_alarm_black_24dp"
+                    android:contentDescription="@string/empty" />
+
+                <TextView
+                    android:id="@+id/alarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alarm"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/white"
+                    android:textSize="30dp"
+                    app:layout_constraintStart_toEndOf="@+id/alarmButton"
+                    app:layout_constraintTop_toBottomOf="@+id/clock" />
+
+                <TextView
+                    android:id="@+id/alarm2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Alarm"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/white"
+                    android:textSize="18dp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/alarm"
+                    app:layout_constraintStart_toEndOf="@+id/alarm"
+                    app:layout_constraintTop_toBottomOf="@+id/clock" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorDivider"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alarmGrp" />
+
+        <LinearLayout
+            android:id="@+id/shortcuts"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"></LinearLayout>
+
+        <View
+            android:id="@+id/shadow"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shortcuts" />
+
+</android.support.constraint.ConstraintLayout>
+
+
